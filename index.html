@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <div>
+            <span>
+                <label for="inp-preco-energia">Custo kW/h(R$):</label>
+                <input id="inp-preco-energia" type="number">
+            </span>
+            <span>
+                <label for="inp-cotacao-dolar">Cotação Dolar:</label>
+                <input id="inp-cotacao-dolar" type="number">
+            </span>
+        </div>
+        <div id="area-cadastro">
+            <span>
+                <label for="inp-qtd">Qtd:</label>
+                <input id="inp-qtd" type="number" min="1" placeholder="Ex: 1">
+            </span>
+            <span>
+                <label for="inp-produto">Produto:</label>
+                <input id="inp-produto" type="text" placeholder="Ex: Placa de vídeo RTX 3080">
+            </span>
+            <span>
+                <label for="inp-preco-produto">Preço:</label>
+                <input id="inp-preco-produto" type="number" min="1" placeholder="Ex: 7525.35">
+            </span>
+            <span>
+                <label for="inp-consumo">Consumo(W/h):</label>
+                <input id="inp-consumo" type="number" min="1" placeholder="Ex: 180">
+            </span>
+            <span>
+                <label for="inp-renda">Renda($/Dia):</label>
+                <input id="inp-renda" type="number" placeholder="Ex: 4.25">
+            </span>
+            <span>
+                <button id="btn-adicionar" onclick="addItem(this)">Adicionar</button>
+            </span>
+        </div>
+        
+        <div id="area-tabela">
+            <table>
+                <thead>
+                    <th>Qtd</th>
+                    <th>Produto</th>
+                    <th>Preço(Un)</th>
+                    <th>Consumo(W/h)</th>
+                    <th>Rendimento(Un)</th>
+                    <th>Ação</th>        
+                </thead>
+                <tbody>
+                    <tr id='item-exemplo'>
+                        <td>Ex: 1</td>
+                        <td>Ex: RTX 3070TI</td>
+                        <td>Ex: 8521.66</td>
+                        <td>Ex: 320</td>
+                        <td>Ex: 4.25</td>
+                        <td>
+                            <button  class="btn-del-item" onclick="delItem(this)" posicao="item-exemplo">
+                                <svg version="1.1" width="25px" height="25px" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 489.425 489.425" style="enable-background:new 0 0 489.425 489.425;" xml:space="preserve">
+                                    <path d="M122.825,394.663c17.8,19.4,43.2,30.6,69.5,30.6h216.9c44.2,0,80.2-36,80.2-80.2v-200.7c0-44.2-36-80.2-80.2-80.2h-216.9
+                                        c-26.4,0-51.7,11.1-69.5,30.6l-111.8,121.7c-14.7,16.1-14.7,40.3,0,56.4L122.825,394.663z M29.125,233.063l111.8-121.8
+                                        c13.2-14.4,32-22.6,51.5-22.6h216.9c30.7,0,55.7,25,55.7,55.7v200.6c0,30.7-25,55.7-55.7,55.7h-217c-19.5,0-38.3-8.2-51.5-22.6
+                                        l-111.7-121.8C23.025,249.663,23.025,239.663,29.125,233.063z"/>
+                                    <path d="M225.425,309.763c2.4,2.4,5.5,3.6,8.7,3.6s6.3-1.2,8.7-3.6l47.8-47.8l47.8,47.8c2.4,2.4,5.5,3.6,8.7,3.6s6.3-1.2,8.7-3.6
+                                        c4.8-4.8,4.8-12.5,0-17.3l-47.9-47.8l47.8-47.8c4.8-4.8,4.8-12.5,0-17.3s-12.5-4.8-17.3,0l-47.8,47.8l-47.8-47.8
+                                        c-4.8-4.8-12.5-4.8-17.3,0s-4.8,12.5,0,17.3l47.8,47.8l-47.8,47.8C220.725,297.263,220.725,304.962,225.425,309.763z"/>
+                                </svg>
+                            </button>`
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div id="area-resultado">
+            <span>
+                <label for="">Investimento Total(R$):</label>
+                <output id="out-investimento"></output>
+            </span>
+            <span>
+                <label for="">Rendimento Bruto(R$/Mês):</label>
+                <output id="out-rendimento-bruto"></output>
+            </span>
+            <span>
+                <label for="">Rendimento Líquido(R$/Mês):</label>
+                <output id="out-rendimento-liquido"></output>
+            </span>
+            <span>
+                <label for="">Consumo Energia(kW/Mês):</label>
+                <output id="out-consumo-energia"></output>
+            </span>
+            <span>
+                <label for="">Custo Energia(R$):</label>
+                <output id="out-custo-energia"></output>
+            </span>
+            <span>
+                <label for="">ROI(Meses):</label>
+                <output id="out-roi"></output>
+            </span>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

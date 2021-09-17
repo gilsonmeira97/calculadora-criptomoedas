@@ -1,0 +1,135 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#area-cadastro, #area-resultado {
+    margin: 15px 0px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 0px 20px 10px;
+
+}
+
+#area-cadastro > span, #area-resultado > span {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+#area-cadastro label, #area-resultado label {
+    display: block;
+}
+
+label {
+    margin-left: 10px;
+    font-size: 0.8em;
+    font-weight: bolder;
+}
+
+
+/*-------------------------Botão------------------------*/
+
+#btn-adicionar {
+    background-color: #027aff;
+    box-shadow: 1px 1px 5px 0px #c8c8c8;
+    color: #fff;
+    font-size: 0.85em;
+    font-weight: bold;
+    height: 30px;
+    width: 90px;
+    border-radius: 25px;
+    border: 1px solid #027aff;
+}
+
+#btn-adicionar:hover {
+    background-color: #0664cc;
+}
+
+.btn-del-item {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+}
+
+/*---------------------Inputs------------------------------*/
+
+input {
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+#inp-preco-energia, #inp-cotacao-dolar {
+    width: 60px;
+}
+
+#inp-qtd {
+    width: 50px;
+}
+
+#inp-produto {
+    width: 230px;
+}
+
+#inp-preco-produto {
+    width: 90px;
+}
+
+#inp-consumo {
+    width: 80px;
+}
+
+#inp-renda {
+    width: 70px;
+}
+
+input::placeholder {
+    font-size: 0.85em;
+}
+
+/*---------------------------Tabela-------------------------*/
+
+table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead th {
+    border-bottom: 3px solid #444;
+}
+
+th, td {
+    padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #dedede;
+}
+
+#area-tabela {
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------------Outputs/Input(readonly)----------------------*/
+
+output {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    min-width: 70px;
+    padding: 0px 10px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1em;
+}
